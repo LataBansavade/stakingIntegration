@@ -310,6 +310,7 @@ const StakeUI = () => {
   }, [contract, pool?.currentPoolSize, address]);
 
   // console.log("pool data is ", pool)
+  console.log("unlockAfter" , unlockAfter)
 
   return (
     <div className="p-4 min-h-screen text-white bg-black md:p-8">
@@ -382,7 +383,7 @@ const StakeUI = () => {
                   <div className="font-medium">{pool.minLockDays} Days</div>
                 </div>
                 <div>
-                  <div className="text-sm text-gray-400">Locked Until</div>
+                  <div className="text-sm text-gray-400">Locked at</div>
                   <div className="text-right">
                     {userInfo?.stakingTime == 0
                       ? "NA"
